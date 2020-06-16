@@ -8,6 +8,7 @@ import React from 'react';
         render(){
             return (
                 <div>
+                    <h2>Test</h2>
                      <input type="text" />
                 </div>
             )
