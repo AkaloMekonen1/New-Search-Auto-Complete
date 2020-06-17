@@ -4,7 +4,7 @@ export default class Countries extends React.Component{
     render(){
         return(
             <div>
-              <h2>Test</h2>
+              <h2>2</h2>
             </div>
         )
     }
