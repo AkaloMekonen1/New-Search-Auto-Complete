@@ -22,8 +22,13 @@ import Countries from './Countries';
             })
         }
         handleChange = (e)=>{
-            const text = e.target.value
-            console.log(text)
+            const value = e.target.value
+            console.log(value)
+            if(value.length == 0){
+                return this.setState(()=>({
+                    options: []
+                }))
+            }
         }
         render(){
             return (
