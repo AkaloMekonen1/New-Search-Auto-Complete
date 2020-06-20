@@ -5,7 +5,7 @@ import Countries from './Countries';
     export default class AutoCompletedText extends React.Component{
         constructor(){
             super()
-            this.country = [
+            this.countries = [
                 "Israel",
                 "USA",
                 "Italy",
@@ -30,6 +30,10 @@ import Countries from './Countries';
                 }))
             }else{
                 const regex = new RegExp(`${value}`, 'i')//check if the countries list match to the user's value
+                const suggestions = this.countries.sort().filter((item)=>item.test(regex))
+                this.setState(()=>({
+                    options: suggestions
+                }))
             }
         }
         render(){
@@ -37,7 +41,7 @@ import Countries from './Countries';
                 <div>
                    <input type="text" onChange={this.handleChange} />
                    <ul>
-                     {this.country.map((country)=>
+                     {this.countries.map((country)=>
                          <li key={country}>{country}</li>
                      )}
                    </ul>
