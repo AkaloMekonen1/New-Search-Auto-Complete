@@ -31,6 +31,9 @@ import Countries from './Countries';
                 this.setState(()=>({suggestions}))
             }
         }
+        suggestionsValue = ()=>{
+            
+        }
         render(){
             return (
                 <div>
