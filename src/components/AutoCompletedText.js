@@ -21,13 +21,14 @@ import Countries from './Countries';
                 isHidden: !this.state.isHidden
             })
         }
-        handleClick = ()=>{
-            console.log("test")
+        handleChange = (e)=>{
+            const text = e.target.value
+            console.log(text)
         }
         render(){
             return (
                 <div>
-                   <input type="text" onChange={this.handleClick} name="insert"/>
+                   <input type="text" onChange={this.handleChange} />
                    <ul>
                      {this.country.map((country)=>
                          <li key={country}>{country}</li>
