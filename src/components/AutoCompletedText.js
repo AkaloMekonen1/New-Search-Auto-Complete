@@ -28,6 +28,8 @@ import Countries from './Countries';
                 return this.setState(()=>({
                     options: []
                 }))
+            }else{
+                const regex = new RegExp(`${value}`, 'i')//check if the countries list match to the user's value
             }
         }
         render(){
