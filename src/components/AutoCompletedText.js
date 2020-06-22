@@ -32,17 +32,23 @@ import Countries from './Countries';
             }
         }
         suggestionsValue = ()=>{
-            
+            const {suggestions} = this.state
+            if(suggestions.length==0){
+                return null
+            }
+            return (
+                <ul>
+                     {this.countries.map((country)=>
+                         <li key={country}>{country}</li>
+                     )}
+                   </ul>
+            )
         }
         render(){
             return (
                 <div>
                    <input type="text" onChange={this.handleChange} />
-                   <ul>
-                     {this.countries.map((country)=>
-                         <li key={country}>{country}</li>
-                     )}
-                   </ul>
+                   
                 </div>
             )
         }
