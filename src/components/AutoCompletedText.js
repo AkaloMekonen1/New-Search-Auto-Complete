@@ -26,8 +26,8 @@ import Countries from './Countries';
             console.log(value)
             let suggestions = []
             if(value.length>0){
-                const regex = new RegExp(`${value}`, 'i')//check if the value of countries array are match to the user's value 
-                suggestions = this.countries.sort().filter((v)=>v.test(regex)) 
+                const regex = new RegExp(`^${value}`, 'i')//check if the letters     of countries are match to the user's value 
+                suggestions = this.countries.sort().filter(element=>element.test(regex)) //move to suggestions the matched values
                 this.setState(()=>({suggestions}))
             }
         }
