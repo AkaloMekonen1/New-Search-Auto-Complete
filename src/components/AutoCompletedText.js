@@ -14,14 +14,9 @@ import Countries from './Countries';
             ]
             this.state = {
                  options: [],
-                 isHidden: false
+                 text: ''
             }
-        }
-        toggleIsHidden = ()=>{
-            this.setState({
-                isHidden: !this.state.isHidden
-            })
-        }               
+        }              
         handleChange = (e)=>{
             const value = e.target.value
             let suggestions = []
@@ -39,7 +34,7 @@ import Countries from './Countries';
             return (
                 <ul>
                      {this.state.options.map((country)=>
-                         <li key={country}>{country}</li>
+                         <li key={country} onClick={console.log("clicked")}>{country}</li>
                      )}
                    </ul>
             )
@@ -48,7 +43,7 @@ import Countries from './Countries';
         render(){
             return (
                 <div>
-                   <input type="text" onChange={this.handleChange} />
+                   <input type="text" onChange={this.handleChange} value={console.log("hi")} />
                    {this.suggestionsValue()}
                 </div>
             )
