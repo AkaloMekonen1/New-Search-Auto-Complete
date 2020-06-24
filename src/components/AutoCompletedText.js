@@ -40,8 +40,8 @@ import Countries from './Countries';
             )
             
         }
-        handleText = ()=>{
-            this.setState(()=>({text:this.state.options}))
+        handleText = (value)=>{
+            this.setState(()=>({text:value}))
         }
         render(){
             return (
