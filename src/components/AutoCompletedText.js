@@ -24,7 +24,7 @@ import Countries from './Countries';
                 const regex = new RegExp(`^${value}`, 'i')//check if the letters of countries are match to the user's value 
                 suggestions = this.countries.sort().filter(element=>regex.test(element)) //move to suggestions the matched values
             }
-            this.setState(()=>({options:suggestions}))
+            this.setState(()=>({options:suggestions, text: value}))
         }
         suggestionsValue = ()=>{
             
@@ -34,16 +34,19 @@ import Countries from './Countries';
             return (
                 <ul>
                      {this.state.options.map((country)=>
-                         <li key={country} onClick={console.log("clicked")}>{country}</li>
+                         <li key={country}>{country}</li>
                      )}
                    </ul>
             )
             
         }
+        handleText = ()=>{
+            this.setState(()=>({text:this.state.options}))
+        }
         render(){
             return (
                 <div>
-                   <input type="text" onChange={this.handleChange} value={console.log("hi")} />
+                   <input type="text" onChange={this.handleChange} value={this.state.text} />
                    {this.suggestionsValue()}
                 </div>
             )
