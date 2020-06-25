@@ -1,8 +1,12 @@
+.App{
+    text-align: center;
+}
 .AutoCompletedText{
     width: 100%;
-    text-align: center;
     padding-top: 50px;
+    border: 1px solid;
 }
 .country-list{
     cursor: pointer;
+    text-align: center;
 }
