@@ -5,7 +5,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AutoCompletedText />
+    <div className="App">
+      <AutoCompletedText />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
