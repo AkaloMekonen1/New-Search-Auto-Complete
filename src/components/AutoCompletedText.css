@@ -7,10 +7,15 @@
 }
 .AutoCompletedText{
     width: 100%;
-    padding-top: 50px;
     border: 1px solid;
+    box-shadow: gray;
+}
+.AutoCompletedText input{
+    width: 100%;
+    border: none;
 }
 .country-list{
     cursor: pointer;
-    text-align: center;
+    text-align: left;
+    width: 100%;
 }
