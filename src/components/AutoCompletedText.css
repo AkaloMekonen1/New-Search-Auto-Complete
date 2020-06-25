@@ -14,7 +14,8 @@
     width: 100%;
     border: none;
 }
-.country-list{
+.AutoCompletedText ul{
+    list-style-type: none;
     cursor: pointer;
     text-align: left;
     width: 100%;
