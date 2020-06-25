@@ -1,6 +1,10 @@
 .App{
     text-align: center;
 }
+.App-component{
+    margin: 150px auto 0 auto;
+    width: 600px;
+}
 .AutoCompletedText{
     width: 100%;
     padding-top: 50px;
