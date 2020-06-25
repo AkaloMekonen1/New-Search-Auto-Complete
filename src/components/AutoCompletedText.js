@@ -36,7 +36,7 @@ import Countries from './Countries';
             return (
                 <ul>
                      {this.state.options.map((country)=>
-                         <li key={country} onClick={()=>this.suggestionsClicked(country)}>{country}</li>
+                         <li className="country-list" key={country} onClick={()=>this.suggestionsClicked(country)}>{country}</li>
                      )}
                    </ul>
             )
@@ -46,7 +46,7 @@ import Countries from './Countries';
         }
         render(){
             return (
-                <div>
+                <div className="AutoCompletedText">
                    <input type="text" onChange={this.handleChange} value={this.state.text} />
                    {this.suggestionsValue()}
                 </div>
