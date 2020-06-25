@@ -36,7 +36,7 @@ import Countries from './Countries';
             return (
                 <ul>
                      {this.state.options.map((country)=>
-                         <li className="country-list" key={country} onClick={()=>this.suggestionsClicked(country)}>{country}</li>
+                         <li key={country} onClick={()=>this.suggestionsClicked(country)}>{country}</li>
                      )}
                    </ul>
             )
