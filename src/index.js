@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AutoCompletedText from './components/AutoCompletedText';
+import Countries from './Countries';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <div className="App">
       <div className="App-component">
-        <AutoCompletedText />
+        <AutoCompletedText item={countries}/>
       </div>  
     </div>
   </React.StrictMode>,
