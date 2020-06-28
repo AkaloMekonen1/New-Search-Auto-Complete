@@ -5,15 +5,6 @@ import Countries from './Countries';
     export default class AutoCompletedText extends React.Component{
         constructor(){
             super()
-            this.countries = [
-                "Israel",
-                "USA",
-                "Italy",
-                "United Kingdom",
-                "Spain",
-                "India",
-                "Ethiopia"
-            ]
             this.state = {
                  options: [],
                  text: ''
