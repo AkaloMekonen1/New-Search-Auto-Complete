@@ -34,3 +34,7 @@
     padding: 10px 5px;
     cursor: pointer;
 }
+.AutoCompletedText li:hover{
+    text-decoration: underline;
+    background-color: gray;
+}
