@@ -1,6 +1,3 @@
-import React from "react";
-import AutoCompletedText from "./AutoCompletedText";
-
 export default `Afghanistan
 Albania
 Algeria

@@ -1,10 +1,9 @@
 import React from 'react';
 import './AutoCompletedText.css'
-import Countries from './Countries';
 
     export default class AutoCompletedText extends React.Component{
-        constructor(){
-            super()
+        constructor(props){
+            super(props)
             this.state = {
                  options: [],
                  text: ''
@@ -15,7 +14,7 @@ import Countries from './Countries';
             let suggestions = []
             if(value.length>0){
                 const regex = new RegExp(`^${value}`, 'i')//check if the letters of countries are match to the user's value 
-                suggestions = this.countries.sort().filter(element=>regex.test(element)) //move to suggestions the matched values
+                suggestions = this.props.item.sort().filter(element=>regex.test(element)) //move to suggestions the matched values
             }
             this.setState(()=>({options:suggestions, text:value}))
                             }

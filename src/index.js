@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AutoCompletedText from './components/AutoCompletedText';
-import Countries from './Countries';
+import countries from './components/countries';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
