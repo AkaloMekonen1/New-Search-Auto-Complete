@@ -13,10 +13,24 @@
 .AutoCompletedText input{
     width: 100%;
     border: none;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+    
 }
 .AutoCompletedText ul{
     list-style-type: none;
-    cursor: pointer;
     text-align: left;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid;
+}
+.AutoCompletedText::before{
+    content: "";
+}
+.AutoCompletedText li{
+    padding: 10px 5px;
+    cursor: pointer;
 }
