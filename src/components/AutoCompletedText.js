@@ -13,8 +13,8 @@ import './AutoCompletedText.css'
             const value = e.target.value
             let suggestions = []
             if(value.length>0){
-                const regex = new RegExp(`^${value}`, 'i')//check if the letters of countries are match to the user's value 
-                suggestions = this.props.item.sort().filter(element=>regex.test(element)) //move to suggestions the matched values
+                const regex = new RegExp(`^${value}`, 'i')//The letters I want to test 
+                suggestions = this.props.item.sort().filter(element=>regex.test(element)) //check if the letters I want the user insert match the letters of the countries
             }
             this.setState(()=>({options:suggestions, text:value}))
                             }
